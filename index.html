@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UK Content AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">AI CONTENT AGENT</div>
+        <h1>UK Content AI</h1>
+      </div>
+      <div class="status"><span></span> Ready</div>
+    </header>
+
+    <section class="workspace">
+      <aside class="sidebar">
+        <button class="new-chat" id="newChat">＋ New content</button>
+
+        <div class="section-label">Create</div>
+        <button class="quick" data-prompt="Find a trending UK topic and create a question-style image.">🇬🇧 UK trend</button>
+        <button class="quick" data-prompt="Find a current UK news story and create a news image.">📰 UK news</button>
+        <button class="quick" data-prompt="Find a trending UK topic and create a 15-second video.">🎬 UK video</button>
+
+        <div class="section-label">Agent status</div>
+        <div class="agent-card"><b>Brain</b><small>ChatGPT</small></div>
+        <div class="agent-card"><b>Research</b><small>Not connected yet</small></div>
+        <div class="agent-card"><b>Image</b><small>Not connected yet</small></div>
+        <div class="agent-card"><b>Video</b><small>Not connected yet</small></div>
+      </aside>
+
+      <section class="chat-area">
+        <div class="messages" id="messages">
+          <div class="welcome">
+            <div class="welcome-icon">✦</div>
+            <h2>Your content agent</h2>
+            <p>Tell me what UK content you want. Research, creation and export will be connected in the next stages.</p>
+            <div class="suggestions">
+              <button class="suggestion" data-prompt="Find a trending UK topic and create a question-style image.">Create a UK trend image</button>
+              <button class="suggestion" data-prompt="Find today's biggest UK news story and prepare a post.">Find today's UK news</button>
+              <button class="suggestion" data-prompt="Create a 15-second UK news video.">Create a UK news video</button>
+            </div>
+          </div>
+        </div>
+
+        <form class="composer" id="composer">
+          <textarea id="prompt" rows="1" placeholder="Tell your content agent what to create..."></textarea>
+          <button type="submit" aria-label="Send">➤</button>
+        </form>
+        <div class="hint">Example: “Find a trending UK topic and make a question-style image.”</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
